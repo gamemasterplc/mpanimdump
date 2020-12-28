@@ -12,8 +12,7 @@
 #define STB_IMAGE_WRITE_IMPLEMENTATION
 #include "stb_image_write.h"
 
-char *prog_name;
-static FILE *file;
+static char *prog_name;
 
 void PrintError(const char *fmt, ...)
 {
@@ -104,7 +103,7 @@ int main(int argc, char **argv)
     if (argc != 2 && argc != 3) {
         PrintUsage();
     }
-    file = fopen(argv[1], "rb");
+    FILE *file = fopen(argv[1], "rb");
     if (!file) {
         PrintError("Failed to open %s for reading.", argv[1]);
     }
