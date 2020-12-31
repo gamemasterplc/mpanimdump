@@ -130,7 +130,7 @@ void AtbFormat::Dump(std::string dir, std::string name)
 		std::string bank_name = "bank" + std::to_string(i);
 		bank->SetAttribute("name", bank_name.c_str());
 		for (int16_t j = 0; j < m_bank_data[i].num_frames; j++) {
-			if (m_bank_data[i].frames[j].pattern == -1) { //Prematurely Terminate Animation Frame
+			if (m_bank_data[i].frames[j].delay == -1) { //Prematurely Terminate Animation Frame
 				break;
 			}
 			tinyxml2::XMLElement *frame = document.NewElement("frame");
