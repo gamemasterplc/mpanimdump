@@ -443,6 +443,7 @@ void AnimExFormat::DumpTextures(std::string dir, std::string name, tinyxml2::XML
 			break;
 
 		case ANIMEX_TEX_FORMAT_RGB5A3:
+		case ANIMEX_TEX_FORMAT_RGB5A3_DUPE:
 			decoded_data = DecodeTexture(data.texture[i].data, nullptr, data.texture[i].w, data.texture[i].h, TEX_FORMAT_RGB5A3);
 			break;
 

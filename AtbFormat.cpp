@@ -186,6 +186,7 @@ void AtbFormat::Dump(std::string dir, std::string name)
 				break;
 
 			case ATB_TEX_FORMAT_RGB5A3:
+			case ATB_TEX_FORMAT_RGB5A3_DUPE:
 				decoded_data = DecodeTexture(m_texture_data[i].data, nullptr, m_texture_data[i].w, m_texture_data[i].h, TEX_FORMAT_RGB5A3);
 				break;
 
