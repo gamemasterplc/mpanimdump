@@ -53,7 +53,7 @@ static void WriteRGB5A3Pixel(uint8_t *dst, int16_t w, int16_t x, int16_t y, uint
 		r = color_4_to_8[(value >> 8) & 0xF];
 		g = color_4_to_8[(value >> 4) & 0xF];
 		b = color_4_to_8[value & 0xF];
-		a = color_4_to_8[(value >> 12) & 0x7];
+		a = color_3_to_8[(value >> 12) & 0x7];
 	}
 	dst[(((y * w) + x) * 4) + 0] = r;
 	dst[(((y * w) + x) * 4) + 1] = g;
