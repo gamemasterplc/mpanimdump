@@ -173,9 +173,9 @@ static uint8_t *DecodeI4(uint8_t *data, int16_t w, int16_t h)
 			uint32_t pixel_ofs = (block_idx * 32) + (pixel_idx / 2);
 			uint8_t value;
 			if (j % 2) {
-				value = data[pixel_ofs] >> 4;
+				value = color_4_to_8[data[pixel_ofs] >> 4];
 			} else {
-				value = data[pixel_ofs] & 0xF;
+				value = color_4_to_8[data[pixel_ofs] & 0xF];
 			}
 			dst[(((i * w) + j) * 4) + 0] = value;
 			dst[(((i * w) + j) * 4) + 1] = value;
